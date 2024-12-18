@@ -15,7 +15,8 @@ struct LandmarkRow: View {
         HStack {
             landmark.image
                 .resizable()
-                .frame(width: 50, height: 50)
+                .frame(width: 36, height: 36)
+                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
             Text(landmark.name)
             Spacer()
             if landmark.isFavorite {
